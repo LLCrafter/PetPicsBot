@@ -85,8 +85,8 @@ def save_image(url, pet_name):
         copyfileobj(response, out_file)
 
 
-@bot.command(name='picsof', help='To get a list of pet names is "ppb list". '
-                                 ' Only pet names that are listed will work.')
+@bot.command(name='picof', help='To get a list of pet names is "ppb list". '
+                                 'Only pet names that are listed will work.')
 async def specific_pet_pic(ctx, pet_name):
     if ctx.author == bot.user:
         return
@@ -101,7 +101,6 @@ async def specific_pet_pic(ctx, pet_name):
         await ctx.channel.send("This pet does not exist. Please type: ppb list -to see pet names.")
     except:
         await ctx.channel.send("Something else went wrong when looking for that file.")
-
 
 def path_to_a_pet(pet_name):  # method that creates a path to a file
     n = 0
