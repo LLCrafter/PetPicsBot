@@ -15,10 +15,8 @@ token = os.getenv('DISCORD_TOKEN')
 
 bot = commands.Bot(command_prefix='ppb ')
 
-#add to github
-#requirements.txt file: explicit dependency list
-#check new pics/folders: validation
-#
+# check new pics/folders: validation
+
 
 @bot.event
 async def on_ready():
@@ -86,7 +84,7 @@ def save_image(url, pet_name):
 
 
 @bot.command(name='picof', help='To get a list of pet names is "ppb list". '
-                                 'Only pet names that are listed will work.')
+                                'Only pet names that are listed will work.')
 async def specific_pet_pic(ctx, pet_name):
     if ctx.author == bot.user:
         return
@@ -101,6 +99,7 @@ async def specific_pet_pic(ctx, pet_name):
         await ctx.channel.send("This pet does not exist. Please type: ppb list -to see pet names.")
     except:
         await ctx.channel.send("Something else went wrong when looking for that file.")
+
 
 def path_to_a_pet(pet_name):  # method that creates a path to a file
     n = 0
@@ -124,10 +123,9 @@ def path_to_a_file(directory):  # method that creates a path to a file
 
 bot.run(token)
 
-#get, put, post, etc through html
-#get request is standard view webpage.
-#put request is ???
-#post request is use in login system.
-#rest calls, ^^^
-#get request on url get back just a jpeg. or image
-
+# get, put, post, etc through html
+# get request is standard view webpage.
+# put request is ???
+# post request is use in login system.
+# rest calls, ^^^
+# get request on url get back just a jpeg. or image
